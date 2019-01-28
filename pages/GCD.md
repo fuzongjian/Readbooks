@@ -416,3 +416,5 @@
 2019-01-28 17:43:09.376160+0800 Advance_Demo[13741:1404091] 1---<NSThread: 0x600000074fc0>{number = 8, name = (null)}
 2019-01-28 17:43:11.380480+0800 Advance_Demo[13741:1404091] 1---<NSThread: 0x600000074fc0>{number = 8, name = (null)}
 ```
+- **GCD对列组：dispatch_group**
+- **GCD信号量：dispatch_semaphore**

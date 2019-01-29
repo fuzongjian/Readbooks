@@ -93,7 +93,7 @@ User * user = [[User alloc] init];
 [user performSelector:@selector(drived)];
 ```
 
-方案一: `+(BOOL)resolveInstanceMethod:(SEL)sel`
+方案一: `+(BOOL)resolveInstanceMethod:(SEL)sel;允许用户在此时为该Class动态添加实现。如果有实现了，则调用并返回。`
 ```
 // User.m
 // 当调用方法时，系统会调用resolveInstanceMethod这个方法。
@@ -120,7 +120,7 @@ void run(id self,SEL sel){
     NSLog(@"I'm running");
 }
 ```
-方案二: `(id)forwardingTargetForSelector:(SEL)aSelector`
+方案二: `(id)forwardingTargetForSelector:(SEL)aSelector;尝试找到一个能响应该消息的对象。如果获取到，则直接转发给它。`
 ```
 // User.m
 // 消息转发重定向——决定由谁来执行(转发)
